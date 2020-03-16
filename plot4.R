@@ -21,8 +21,8 @@ with(myData, plot(DateTime, Global_active_power, xlab = "", ylab = "Global Activ
 with(myData, plot(DateTime, Voltage, xlab = "datetime", ylab = "Voltage", type = "l"))
 
 ## plot 3
-plot(myData$DateTime, myData$Sub_metering_1, type = "n")
-with(myData, lines(DateTime, Sub_metering_1, xlab = "", ylab = "Energy sub metering"))
+plot(myData$DateTime, myData$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n")
+with(myData, lines(DateTime, Sub_metering_1, xlab = "", ylab = ""))
 with(myData, lines(DateTime, Sub_metering_2, xlab = "", ylab = "", col = "red"))
 with(myData, lines(DateTime, Sub_metering_3, xlab = "", ylab = "", col = "blue"))
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "red", "blue"), lwd = 1, bty = "n")
