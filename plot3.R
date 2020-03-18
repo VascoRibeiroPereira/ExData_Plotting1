@@ -12,7 +12,7 @@ myData <- filter(myData, Date >= "2007-02-01", Date <="2007-02-02")
 myData <- mutate(myData, DateTime = ymd_hms(paste(Date, Time)))
 
 png(filename = "plot3.png")
-plot(myData$DateTime, myData$Sub_metering_1, type = "n")
+plot(myData$DateTime, myData$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n")
 with(myData, lines(DateTime, Sub_metering_1, xlab = "", ylab = "Energy sub metering"))
 with(myData, lines(DateTime, Sub_metering_2, xlab = "", ylab = "", col = "red"))
 with(myData, lines(DateTime, Sub_metering_3, xlab = "", ylab = "", col = "blue"))
